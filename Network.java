@@ -11,16 +11,13 @@ class Network{
     ArrayList<Integer> Layers = new ArrayList<Integer>();
     ArrayList<Double> lowCosts = new ArrayList<Double>();
     int count = 0;
-    int numLayers = 3;
+    int numLayers = 0;
     double c = 10000;
 
-    public Network(){
+    public Network(ArrayList<Integer> input_layers){
         Random rand = new Random();
-        Layers.add(784);
-        Layers.add(100);
-        //Layers.add();
-        //Layers.add(400);
-        Layers.add(10);
+        Layers = input_layers;
+        numLayers = Layers.size();
         double[][] w = new double[0][0];
         for(int i = 0; i <  numLayers - 1; i++){
             w = new double[Layers.get(i + 1)][Layers.get(i)];
