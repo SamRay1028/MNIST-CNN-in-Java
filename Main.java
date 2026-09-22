@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello world!");
         //System.out.println("Hello world!");
-        Network net = new Network();
+        Network net = new Network(new ArrayList<>(List.of(784, 100, 10)));
         ArrayList<Image> trainImages = new DataReader().readData("/Users/samraya/IdeaProjects/Neural Network 3.1/Data/mnist_train.csv");
         ArrayList<Image> testImages = new DataReader().readData("/Users/samraya/IdeaProjects/Neural Network 3.1/Data/mnist_test.csv");
         ArrayList<ArrayList<Image>> trainImageSets = new ArrayList<ArrayList<Image>>();
